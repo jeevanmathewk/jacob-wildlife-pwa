@@ -72,13 +72,33 @@ function initInstallButton() {
     deferredPrompt = null;
   });
 
-  btn.addEventListener("click", async () => {
-    if (!deferredPrompt) return;
-    deferredPrompt.prompt();
-    await deferredPrompt.userChoice;
-    deferredPrompt = null;
-    btn.hidden = true;
-  });
+ btn.addEventListener("click", async () => {
+  const status = document.getElementById("installStatus");
+
+  if (!deferredPrompt) {
+    if (status) {
+      status.textContent =
+        "Install is not available right now. Please use Chrome and make sure the app is not already installed.";
+    }
+    return;
+  }
+
+  if (status) status.textContent = "";
+
+  deferredPrompt.prompt();
+  const choice = await deferredPrompt.userChoice;
+
+  deferredPrompt = null;
+  btn.hidden = true;
+
+  if (status) {
+    status.textContent =
+      choice.outcome === "accepted"
+        ? "Installing… check your home screen."
+        : "Install cancelled.";
+  }
+});
+
 }
 
 function initNetworkStatus() {
