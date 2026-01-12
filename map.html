@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#0b3d2e" />
+
+  <title>Map | Jacob Wildlife Centre</title>
+
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
+    <link rel="manifest" href="manifest.webmanifest" />
+
+</head>
+
+<body data-page="map">
+
+  <header class="top-nav">
+    <div class="brand">
+      <span class="logo">🦉</span>
+      <span class="brand-text">Jacob Wildlife Centre</span>
+    </div>
+
+    <nav class="top-links">
+      <a class="nav-link" href="index.html">Home</a>
+      <a class="nav-link" href="animals.html">Animals</a>
+      <a class="nav-link is-active" href="map.html">Map</a>
+      <a class="nav-link" href="favourites.html">Favourites</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <h1>Animal Map</h1>
+    <p>This map shows animal zones and your current location.</p>
+
+    <section id="mapStatus" class="card">
+  Finding your location…
+</section>
+
+<section class="card map-controls" aria-label="Map controls">
+  <div class="controls-row">
+    <button id="btnLocateMe" class="button" type="button">📍 Locate me</button>
+    <button id="btnShowAll" class="button button-secondary" type="button">🗺️ Show all animals</button>
+  </div>
+
+  <div class="controls-row">
+    <label class="field" style="margin:0;">
+      <span class="field-label">Find an animal</span>
+      <select id="animalSelect" class="input">
+        <option value="">Loading animals…</option>
+      </select>
+    </label>
+
+    <button id="btnLocateAnimal" class="button" type="button">🧭 Locate animal</button>
+  </div>
+</section>
+
+<div id="map" class="map"></div>
+
+        <section class="card map-legend" aria-label="Map legend">
+      <h2>🗺️ Map Legend</h2>
+      <ul class="legend-list">
+        <li><span class="legend-emoji">🦊</span> Red Fox</li>
+        <li><span class="legend-emoji">🦉</span> Barn Owl</li>
+        <li><span class="legend-emoji">🦔</span> Hedgehog</li>
+        <li><span class="legend-emoji">🦦</span> Otter</li>
+        <li><span class="legend-emoji">🐾</span> Other animals</li>
+      </ul>
+    </section>
+
+  </main>
+
+
+  <nav class="bottom-nav">
+    <a class="nav-item" href="index.html">🏠 Home</a>
+    <a class="nav-item" href="animals.html">🦊 Animals</a>
+    <a class="nav-item is-active" href="map.html">🗺️ Map</a>
+    <a class="nav-item" href="favourites.html">⭐ Favourites</a>
+  </nav>
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

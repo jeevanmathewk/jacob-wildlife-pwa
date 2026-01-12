@@ -1,0 +1,310 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#0b3d2e" />
+
+  <title>Kids Zone | Jacob Wildlife Centre</title>
+
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="manifest" href="manifest.webmanifest" />
+
+  <!-- Small, page-only styling (keeps it simple & kid-friendly without touching your main CSS) -->
+  <style>
+    .kids-hero {
+      text-align: center;
+      padding: 1.1rem 1rem;
+    }
+    .kids-hero h1 {
+      margin: 0 0 .35rem;
+      font-size: 1.6rem;
+      line-height: 1.2;
+    }
+    .kids-hero p {
+      margin: 0;
+      opacity: .9;
+    }
+    .kids-grid {
+      display: grid;
+      gap: .9rem;
+      margin-top: .9rem;
+    }
+    .kids-actions {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: .6rem;
+      margin-top: .75rem;
+    }
+    .kids-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: .5rem;
+      padding: .85rem .9rem;
+      border-radius: .9rem;
+      text-decoration: none;
+      font-weight: 700;
+      border: 1px solid rgba(255,255,255,.12);
+      box-shadow: 0 8px 18px rgba(0,0,0,.12);
+    }
+    /* Works with both light/dark themes by using currentColor + subtle bg */
+    .kids-btn.primary {
+      background: rgba(11, 61, 46, .14);
+    }
+    .kids-btn.secondary {
+      background: rgba(255, 196, 0, .14);
+    }
+    .kids-mini {
+      font-size: .95rem;
+      opacity: .92;
+    }
+    .kids-checklist {
+      display: grid;
+      gap: .6rem;
+      margin-top: .6rem;
+    }
+    .kids-check {
+      display: flex;
+      gap: .6rem;
+      align-items: flex-start;
+      padding: .7rem .75rem;
+      border-radius: .9rem;
+      background: rgba(255,255,255,.06);
+      border: 1px solid rgba(255,255,255,.10);
+    }
+    .kids-check input {
+      width: 1.1rem;
+      height: 1.1rem;
+      margin-top: .1rem;
+    }
+    .kids-status {
+      margin-top: .65rem;
+      font-weight: 700;
+    }
+    .kids-tip {
+      display: flex;
+      gap: .7rem;
+      align-items: flex-start;
+    }
+    .kids-tip .emoji {
+      font-size: 1.4rem;
+      line-height: 1;
+      margin-top: .05rem;
+    }
+    @media (min-width: 720px) {
+      .kids-grid { grid-template-columns: 1fr 1fr; }
+      .kids-actions { grid-template-columns: 1fr 1fr; }
+      .kids-hero h1 { font-size: 1.9rem; }
+    }
+  </style>
+</head>
+
+<body data-page="kids">
+
+  <header class="top-nav" aria-label="Top navigation">
+    <div class="brand">
+      <span class="logo" aria-hidden="true">🦉</span>
+      <span class="brand-text">Jacob Wildlife Centre</span>
+    </div>
+
+    <nav class="top-links" aria-label="Primary navigation">
+      <a class="nav-link" href="index.html">Home</a>
+      <a class="nav-link" href="animals.html">Animals</a>
+      <a class="nav-link" href="map.html">Map</a>
+      <a class="nav-link" href="favourites.html">Favourites</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <!-- Hero -->
+    <section class="card kids-hero" aria-label="Kids welcome">
+      <h1>Kids Zone 🐾</h1>
+      <p class="kids-mini">Learn about British animals and help wildlife in little ways.</p>
+
+      <div class="kids-actions" role="group" aria-label="Quick actions">
+        <a class="kids-btn primary" href="animals.html">
+          <span aria-hidden="true">🦊</span> Explore Animals
+        </a>
+        <a class="kids-btn secondary" href="favourites.html">
+          <span aria-hidden="true">⭐</span> My Favourites
+        </a>
+      </div>
+    </section>
+
+    <div class="kids-grid">
+      <!-- Simple facts -->
+      <section class="card" aria-label="Quick facts">
+        <h2>Quick facts</h2>
+
+        <div class="kids-tip">
+          <span class="emoji" aria-hidden="true">🦉</span>
+          <div>
+            <strong>Owls</strong> can fly very quietly to catch food at night.
+          </div>
+        </div>
+
+        <div class="kids-tip" style="margin-top:.6rem;">
+          <span class="emoji" aria-hidden="true">🦔</span>
+          <div>
+            <strong>Hedgehogs</strong> like safe gardens with leaves and logs.
+          </div>
+        </div>
+
+        <div class="kids-tip" style="margin-top:.6rem;">
+          <span class="emoji" aria-hidden="true">🐸</span>
+          <div>
+            <strong>Frogs</strong> need clean ponds and damp places to hide.
+          </div>
+        </div>
+      </section>
+
+      <!-- Mini involvement -->
+      <section class="card" aria-label="Today’s kindness challenge">
+        <h2>Today’s kindness 🌱</h2>
+        <p class="kids-mini">Tick what you did today. We’ll save it on this device.</p>
+
+        <form id="kindnessForm" class="kids-checklist">
+          <label class="kids-check">
+            <input type="checkbox" name="kindness" value="water" />
+            <span>💧 Put out a small bowl of water</span>
+          </label>
+
+          <label class="kids-check">
+            <input type="checkbox" name="kindness" value="litter" />
+            <span>🚯 Picked up litter (with an adult)</span>
+          </label>
+
+          <label class="kids-check">
+            <input type="checkbox" name="kindness" value="quiet" />
+            <span>🤫 Stayed quiet near wildlife</span>
+          </label>
+
+          <label class="kids-check">
+            <input type="checkbox" name="kindness" value="learn" />
+            <span>🔍 Learned about one animal</span>
+          </label>
+        </form>
+
+        <p id="kindnessStatus" class="kids-status" aria-live="polite">Done: 0</p>
+
+        <div class="kids-actions" role="group" aria-label="Checklist actions">
+          <button id="saveKindnessBtn" type="button" class="kids-btn primary">
+            <span aria-hidden="true">✅</span> Save
+          </button>
+          <button id="resetKindnessBtn" type="button" class="kids-btn secondary">
+            <span aria-hidden="true">🔄</span> Reset
+          </button>
+        </div>
+      </section>
+
+      <!-- Safety -->
+      <section class="card" aria-label="Safety">
+        <h2>Safety first</h2>
+        <p class="kids-mini">
+          Always ask an adult for help. Never touch wild animals.
+          If an animal looks hurt, tell an adult to contact a rescue centre.
+        </p>
+      </section>
+
+      <!-- Callout -->
+      <section class="card" aria-label="Next step">
+        <h2>Try this next</h2>
+        <p class="kids-mini">
+          Choose an animal, save it as a favourite ⭐, then tell someone one fun fact you learned.
+        </p>
+        <a class="kids-btn primary" href="animals.html" style="margin-top:.6rem;">
+          <span aria-hidden="true">🚀</span> Start Exploring
+        </a>
+      </section>
+    </div>
+  </main>
+
+  <nav class="bottom-nav" aria-label="Bottom navigation">
+    <a class="nav-item" href="index.html">
+      <span class="nav-icon" aria-hidden="true">🏠</span>
+      <span class="nav-label">Home</span>
+    </a>
+
+    <a class="nav-item" href="animals.html">
+      <span class="nav-icon" aria-hidden="true">🦊</span>
+      <span class="nav-label">Animals</span>
+    </a>
+
+    <a class="nav-item" href="map.html">
+      <span class="nav-icon" aria-hidden="true">🗺️</span>
+      <span class="nav-label">Map</span>
+    </a>
+
+    <a class="nav-item" href="favourites.html">
+      <span class="nav-icon" aria-hidden="true">⭐</span>
+      <span class="nav-label">Favourites</span>
+    </a>
+  </nav>
+
+  <script src="app.js"></script>
+
+  <script>
+    (function () {
+      "use strict";
+
+      const STORAGE_KEY = "kids_kindness_v1";
+
+      const form = document.getElementById("kindnessForm");
+      const status = document.getElementById("kindnessStatus");
+      const saveBtn = document.getElementById("saveKindnessBtn");
+      const resetBtn = document.getElementById("resetKindnessBtn");
+
+      function readSaved() {
+        try {
+          const raw = localStorage.getItem(STORAGE_KEY);
+          const data = JSON.parse(raw);
+          return Array.isArray(data) ? data : [];
+        } catch {
+          return [];
+        }
+      }
+
+      function writeSaved(values) {
+        localStorage.setItem(STORAGE_KEY, JSON.stringify(values));
+      }
+
+      function getChecked() {
+        return Array.from(form.querySelectorAll('input[name="kindness"]:checked')).map((i) => i.value);
+      }
+
+      function setChecked(values) {
+        const boxes = form.querySelectorAll('input[name="kindness"]');
+        boxes.forEach((b) => { b.checked = values.includes(b.value); });
+      }
+
+      function updateStatus(values) {
+        status.textContent = `Done: ${values.length}`;
+      }
+
+      // init
+      const saved = readSaved();
+      setChecked(saved);
+      updateStatus(saved);
+
+      form.addEventListener("change", function () {
+        updateStatus(getChecked());
+      });
+
+      saveBtn.addEventListener("click", function () {
+        const values = getChecked();
+        writeSaved(values);
+        updateStatus(values);
+        status.textContent += " ✅";
+      });
+
+      resetBtn.addEventListener("click", function () {
+        localStorage.removeItem(STORAGE_KEY);
+        setChecked([]);
+        updateStatus([]);
+        status.textContent += " 🔄";
+      });
+    })();
+  </script>
+</body>
+</html>

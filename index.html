@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#0b3d2e" />
+
+  <title>Jacob Wildlife Centre</title>
+
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="manifest" href="manifest.webmanifest" />
+</head>
+
+<body>
+
+  <header class="top-nav" aria-label="Top navigation">
+    <div class="brand">
+      <span class="logo" aria-hidden="true">🦉</span>
+      <span class="brand-text">Jacob Wildlife Centre</span>
+    </div>
+
+    <nav class="top-links" aria-label="Primary">
+      <a class="nav-link is-active" href="index.html">Home</a>
+      <a class="nav-link" href="animals.html">Animals</a>
+      <a class="nav-link" href="map.html">Map</a>
+      <a class="nav-link" href="favourites.html">Favourites</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section class="status" aria-label="Device status">
+      <div class="status-row">
+        <strong>Status:</strong>
+        <span id="netStatus">Checking network…</span>
+      </div>
+      <div class="status-row">
+        <strong>Orientation:</strong>
+        <span id="orientStatus">Checking orientation…</span>
+      </div>
+      <div class="status-row">
+        <strong>Battery:</strong>
+        <span id="batteryStatus">Checking battery…</span>
+      </div>
+    </section>
+
+    <section class="hero" aria-label="Welcome section">
+      <h1>Welcome to Jacob Wildlife Centre</h1>
+      <p>
+        Learn about wildlife, explore our habitats, and discover how conservation protects animals and ecosystems.
+      </p>
+
+      <div class="hero-actions">
+        <a class="button" href="animals.html">Browse animals</a>
+        <a class="button button-secondary" href="kids.html">Kids tips</a>
+      </div>
+
+      <div class="hero-actions">
+        <button id="installBtn" class="button" type="button" hidden>
+        Install on your device
+      </button>
+      <p id="installStatus" class="small" aria-live="polite"></p>
+
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>Plan your visit</h2>
+      <ul class="list">
+        <li>Family-friendly trails and habitats</li>
+        <li>Interactive learning stations</li>
+        <li>Conservation projects you can support</li>
+      </ul>
+    </section>
+
+    <section class="card">
+      <h2>Conservation matters</h2>
+      <p>
+        Conservation helps protect habitats, reduces threats like pollution and illegal trade, and supports
+        healthy biodiversity for future generations.
+      </p>
+    </section>
+
+    <section class="card">
+      <h2>Quick links</h2>
+      <div class="grid-2">
+        <a class="tile" href="map.html">
+          <div class="tile-title">Find animals on the map</div>
+          <div class="tile-sub">Uses your location</div>
+        </a>
+
+        <a class="tile" href="favourites.html">
+          <div class="tile-title">Your favourites</div>
+          <div class="tile-sub">Saved on this device</div>
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <nav class="bottom-nav" aria-label="Bottom navigation">
+    <a class="nav-item is-active" href="index.html" aria-current="page">
+      <span class="nav-icon" aria-hidden="true">🏠</span>
+      <span class="nav-label">Home</span>
+    </a>
+
+    <a class="nav-item" href="animals.html">
+      <span class="nav-icon" aria-hidden="true">🦊</span>
+      <span class="nav-label">Animals</span>
+    </a>
+
+    <a class="nav-item" href="map.html">
+      <span class="nav-icon" aria-hidden="true">🗺️</span>
+      <span class="nav-label">Map</span>
+    </a>
+
+    <a class="nav-item" href="favourites.html">
+      <span class="nav-icon" aria-hidden="true">⭐</span>
+      <span class="nav-label">Favourites</span>
+    </a>
+  </nav>
+
+  <script src="app.js"></script>
+
+</body>
+</html>

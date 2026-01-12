@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#0b3d2e" />
+
+  <title>Animal details | Jacob Wildlife Centre</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="manifest" href="manifest.webmanifest" />
+
+</head>
+
+<body data-page="animal-detail">
+
+  <header class="top-nav" aria-label="Top navigation">
+    <div class="brand">
+      <span class="logo" aria-hidden="true">🦉</span>
+      <span class="brand-text">Jacob Wildlife Centre</span>
+    </div>
+
+    <nav class="top-links" aria-label="Primary">
+      <a class="nav-link" href="index.html">Home</a>
+      <a class="nav-link is-active" href="animals.html">Animals</a>
+      <a class="nav-link" href="map.html">Map</a>
+      <a class="nav-link" href="favourites.html">Favourites</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <a class="button button-secondary" href="animals.html">← Back to Animals</a>
+
+    <section id="detailStatus" class="card" aria-live="polite">
+      Loading animal details…
+    </section>
+
+    <section id="animalDetail" class="detail" aria-label="Animal details"></section>
+  </main>
+
+
+  <nav class="bottom-nav" aria-label="Bottom navigation">
+    <a class="nav-item" href="index.html">
+      <span class="nav-icon" aria-hidden="true">🏠</span>
+      <span class="nav-label">Home</span>
+    </a>
+
+    <a class="nav-item is-active" href="animals.html">
+      <span class="nav-icon" aria-hidden="true">🦊</span>
+      <span class="nav-label">Animals</span>
+    </a>
+
+    <a class="nav-item" href="map.html">
+      <span class="nav-icon" aria-hidden="true">🗺️</span>
+      <span class="nav-label">Map</span>
+    </a>
+
+    <a class="nav-item" href="favourites.html">
+      <span class="nav-icon" aria-hidden="true">⭐</span>
+      <span class="nav-label">Favourites</span>
+    </a>
+  </nav>
+
+  <script src="app.js"></script>
+</body>
+</html>
